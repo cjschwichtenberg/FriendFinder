@@ -4,11 +4,10 @@ console.log('Friends: ' + friends);
 
 module.exports = function(app) {
 
-    app.get('/data/friends', function(req, res){
+    app.get("/api/friends", function (req, res) {
         res.json(friends);
-    });
 
-    app.post("/data/friends"), function(req,res){
+        app.post("/api/friends", function (req, res) {            v
         var addPerson = req.body;
         console.log(addPerson),
 
@@ -47,6 +46,6 @@ module.exports = function(app) {
         friends.push(userData);
         
         res.json(bestMatch);
-    });
+    }
 }
 
